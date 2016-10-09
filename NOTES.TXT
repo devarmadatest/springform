@@ -1,0 +1,17 @@
+mvn archetype:generate -DgroupId={project-packaging}
+	-DartifactId={project-name}
+	-DarchetypeArtifactId=maven-archetype-webapp
+	-DinteractiveMode=false
+
+mvn archetype:generate -DgroupId=com.derinaldis \
+	-DartifactId=springform \
+	-DarchetypeArtifactId=maven-archetype-webapp \
+	-DinteractiveMode=false
+
+
+
+mvn clean install -U
+	pulizia maven
+
+
+jar -xvf ./target/springapp-1.0-SNAPSHOT/WEB-INF/lib/spring-webmvc-4.3.3.RELEASE.jar META-INF/spring-form.tld
